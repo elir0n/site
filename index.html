@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eliron Picard — CV</title>
+  <meta name="description" content="Eliron Picard — Computer Science student. Projects in backend, ML fundamentals, and systems." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="top">
+        <div>
+          <h1>Eliron Picard</h1>
+          <p class="subtitle">Computer Science Student • Backend • ML Fundamentals • Systems</p>
+          <p class="meta">
+            Central District •
+            <a href="tel:+972586666746">+972 58-666-6746</a> •
+            <a href="mailto:elironpic3@gmail.com">elironpic3@gmail.com</a>
+          </p>
+        </div>
+
+        <div class="actions">
+          <a class="btn" href="https://www.linkedin.com/in/eliron-picard-130b81374/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn" href="https://github.com/elir0n" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>About</h2>
+      <p>
+        Computer Science student with coursework and hands-on experience in ML fundamentals, Python,
+        backend development, and C/C++. I enjoy building real systems end-to-end, working in Linux environments,
+        and learning new technologies quickly. Looking to contribute to impactful software projects while growing as a developer.
+      </p>
+    </section>
+
+    <section class="grid">
+      <section class="card">
+        <h2>Technical Skills</h2>
+
+        <div class="skill">
+          <div class="label">Languages</div>
+          <div class="value">Python, JavaScript, C/C++, Java, SQL</div>
+        </div>
+
+        <div class="skill">
+          <div class="label">Backend & Data</div>
+          <div class="value">Node.js, Express.js, Docker, REST APIs, MongoDB, SQL, Asterisk, Whisper, n8n (Evolution API)</div>
+        </div>
+
+        <div class="skill">
+          <div class="label">Tools</div>
+          <div class="value">Git/GitHub, Linux, Postman</div>
+        </div>
+
+        <div class="skill">
+          <div class="label">Frontend</div>
+          <div class="value">React, HTML/CSS</div>
+        </div>
+
+        <div class="skill">
+          <div class="label">Spoken</div>
+          <div class="value">Hebrew (native), English (fluent), German (fluent)</div>
+        </div>
+      </section>
+
+      <section class="card" id="projects">
+        <h2>Technical Projects</h2>
+
+        <article class="proj">
+          <div class="proj-head">
+            <h3>AI Voice Agent <span class="muted">(2025)</span></h3>
+            <a class="link" href="https://github.com/elir0n/AI-voice-agent-Dr-Claude" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+          <ul>
+            <li>Built a multilingual AI voice assistant with autonomous booking, rescheduling, and cancellation logic, integrating Whisper and OpenAI models.</li>
+            <li>Designed a scalable architecture using Node.js, Express, SQL, and Asterisk, enabling integration with external scheduling APIs.</li>
+          </ul>
+        </article>
+
+        <article class="proj">
+          <div class="proj-head">
+            <h3>WhatsBlast <span class="muted">(2025)</span></h3>
+            <a class="link" href="https://github.com/suliamit/whatsblast" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+          <ul>
+            <li>Built automation workflows to send and schedule WhatsApp messages using n8n and the Evolution API.</li>
+          </ul>
+        </article>
+
+        <article class="proj">
+          <div class="proj-head">
+            <h3>PlayFlicks <span class="muted">(2025)</span></h3>
+            <a class="link" href="https://github.com/elir0n/PlayFlicks" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+          <ul>
+            <li>Built a full backend with authentication, CRUD operations, and optimized MongoDB queries.</li>
+          </ul>
+        </article>
+
+        <article class="proj">
+          <div class="proj-head">
+            <h3>Java Arkanoid Game <span class="muted">(2024)</span></h3>
+            <a class="link" href="https://github.com/elir0n/Arkanoid-Game" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+          <ul>
+            <li>Developed a modular Java game using OOP principles (interfaces, inheritance, design patterns).</li>
+          </ul>
+        </article>
+      </section>
+    </section>
+
+    <section class="grid">
+      <section class="card">
+        <h2>Education</h2>
+        <div class="edu">
+          <div class="edu-title">B.Sc. in Computer Science — Bar-Ilan University</div>
+          <div class="muted">Jan 2024 – Present • Expected graduation: Aug 2027</div>
+          <div class="pill-row">
+            <span class="pill">Data Structures</span>
+            <span class="pill">Algorithms</span>
+            <span class="pill">Operating Systems</span>
+            <span class="pill">Databases</span>
+            <span class="pill">Machine Learning</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Military Experience</h2>
+        <div class="muted">Air Force Intelligence • Israeli Air Force • 2021 – 2023</div>
+        <ul>
+          <li>Operated in mission-critical environments, strengthening problem-solving, reliability, and adaptability.</li>
+          <li>Collaborated on sensitive projects under strict deadlines in a project-oriented role.</li>
+          <li>Served in reserves for ~2 years with continued operational involvement.</li>
+        </ul>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <div class="muted">© <span id="y"></span> Eliron Picard</div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
