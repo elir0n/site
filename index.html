@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Eliron Picard — CV</title>
-  <meta name="description" content="Eliron Picard — Computer Science student. Projects in backend, ML fundamentals, and systems." />
+  <meta name="description" content="Eliron Picard — Computer Science student. Projects in systems, backend, and machine learning." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -12,120 +12,353 @@
   <header class="header">
     <div class="container">
       <div class="top">
-        <div>
-          <h1>Eliron Picard</h1>
-          <p class="subtitle">Computer Science Student • Backend • ML Fundamentals • Systems</p>
-          <p class="meta">
-            Central District •
-            <a href="tel:+972586666746">+972 58-666-6746</a> •
-            <a href="mailto:elironpic3@gmail.com">elironpic3@gmail.com</a>
-          </p>
+        <div class="header-left">
+          <img class="avatar" src="picture.jpg" alt="Eliron Picard" />
+          <div>
+            <h1>Eliron Picard</h1>
+            <p class="subtitle">Computer Science Student &nbsp;·&nbsp; Backend &nbsp;·&nbsp; Systems &nbsp;·&nbsp; ML</p>
+            <p class="meta">
+              <span class="meta-item">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Central District, Israel
+              </span>
+              <span class="meta-sep">·</span>
+              <a href="tel:+972586666746">+972 58-666-6746</a>
+              <span class="meta-sep">·</span>
+              <a href="mailto:elironpic3@gmail.com">elironpic3@gmail.com</a>
+            </p>
+          </div>
         </div>
-
         <div class="actions">
-          <a class="btn" href="https://www.linkedin.com/in/eliron-picard-130b81374/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a class="btn" href="https://github.com/elir0n" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/eliron-picard-130b81374/" target="_blank" rel="noreferrer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a class="btn" href="https://github.com/elir0n" target="_blank" rel="noreferrer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
         </div>
       </div>
     </div>
   </header>
 
   <main class="container">
-    <section class="card">
+
+    <!-- About -->
+    <section class="card about-card">
       <h2>About</h2>
       <p>
-        Computer Science student with coursework and hands-on experience in ML fundamentals, Python,
-        backend development, and C/C++. I enjoy building real systems end-to-end, working in Linux environments,
-        and learning new technologies quickly. Looking to contribute to impactful software projects while growing as a developer.
+        Computer Science student experienced in building end-to-end software systems — from concurrent C servers and OS-level programming to full-stack web applications and machine learning models. Enjoy working in Linux environments, solving algorithmic problems with practical implementations, and picking up new technologies quickly.
       </p>
     </section>
 
-    <section class="grid">
-      <section class="card">
-        <h2>Technical Skills</h2>
-
-        <div class="skill">
-          <div class="label">Languages</div>
-          <div class="value">Python, JavaScript, C/C++, Java, SQL</div>
-        </div>
-
-        <div class="skill">
-          <div class="label">Backend & Data</div>
-          <div class="value">Node.js, Express.js, Docker, REST APIs, MongoDB, SQL, Asterisk, Whisper, n8n (Evolution API)</div>
-        </div>
-
-        <div class="skill">
-          <div class="label">Tools</div>
-          <div class="value">Git/GitHub, Linux, Postman</div>
-        </div>
-
-        <div class="skill">
-          <div class="label">Frontend</div>
-          <div class="value">React, HTML/CSS</div>
-        </div>
-
-        <div class="skill">
-          <div class="label">Spoken</div>
-          <div class="value">Hebrew (native), English (fluent), German (fluent)</div>
-        </div>
-      </section>
-
-      <section class="card" id="projects">
-        <h2>Technical Projects</h2>
-
-        <article class="proj">
-          <div class="proj-head">
-            <h3>AI Voice Agent <span class="muted">(2025)</span></h3>
-            <a class="link" href="https://github.com/elir0n/AI-voice-agent-Dr-Claude" target="_blank" rel="noreferrer">GitHub</a>
+    <!-- Skills -->
+    <section class="card">
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div>
+          <div class="skill">
+            <div class="label">Languages</div>
+            <div class="value">C, C++, Python, JavaScript, Java</div>
           </div>
-          <ul>
-            <li>Built a multilingual AI voice assistant with autonomous booking, rescheduling, and cancellation logic, integrating Whisper and OpenAI models.</li>
-            <li>Designed a scalable architecture using Node.js, Express, SQL, and Asterisk, enabling integration with external scheduling APIs.</li>
-          </ul>
-        </article>
-
-        <article class="proj">
-          <div class="proj-head">
-            <h3>WhatsBlast <span class="muted">(2025)</span></h3>
-            <a class="link" href="https://github.com/suliamit/whatsblast" target="_blank" rel="noreferrer">GitHub</a>
+          <div class="skill">
+            <div class="label">Backend</div>
+            <div class="value">Node.js, Express.js, REST APIs, Authentication, MongoDB, SQL</div>
           </div>
-          <ul>
-            <li>Built automation workflows to send and schedule WhatsApp messages using n8n and the Evolution API.</li>
-          </ul>
-        </article>
-
-        <article class="proj">
-          <div class="proj-head">
-            <h3>PlayFlicks <span class="muted">(2025)</span></h3>
-            <a class="link" href="https://github.com/elir0n/PlayFlicks" target="_blank" rel="noreferrer">GitHub</a>
+          <div class="skill">
+            <div class="label">Systems</div>
+            <div class="value">POSIX threads, Multithreading, TCP/IP sockets, Unix signals, Process management, Concurrency</div>
           </div>
-          <ul>
-            <li>Built a full backend with authentication, CRUD operations, and optimized MongoDB queries.</li>
-          </ul>
-        </article>
-
-        <article class="proj">
-          <div class="proj-head">
-            <h3>Java Arkanoid Game <span class="muted">(2024)</span></h3>
-            <a class="link" href="https://github.com/elir0n/Arkanoid-Game" target="_blank" rel="noreferrer">GitHub</a>
+          <div class="skill">
+            <div class="label">Machine Learning</div>
+            <div class="value">NumPy, PyTorch, Neural networks, CNNs, K-Means, PCA</div>
           </div>
-          <ul>
-            <li>Developed a modular Java game using OOP principles (interfaces, inheritance, design patterns).</li>
-          </ul>
-        </article>
-      </section>
+        </div>
+        <div>
+          <div class="skill">
+            <div class="label">Infrastructure</div>
+            <div class="value">Linux, Docker, Git / GitHub, Postman</div>
+          </div>
+          <div class="skill">
+            <div class="label">Concepts</div>
+            <div class="value">Graph algorithms, A* pathfinding, CPU scheduling, Recommendation systems, Distributed systems fundamentals</div>
+          </div>
+          <div class="skill">
+            <div class="label">Spoken</div>
+            <div class="value">Hebrew (native) · English (fluent) · German (fluent)</div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="grid">
+    <!-- Projects -->
+    <h2 class="section-title">Projects</h2>
+    <div class="proj-cards">
+
+      <article class="proj-card">
+        <div class="proj-card-head">
+          <div>
+            <div class="proj-title-row">
+              <h3>Waze — GPS Navigation Engine</h3>
+              <span class="badge badge-systems">Systems · C</span>
+            </div>
+            <div class="proj-year">2025</div>
+          </div>
+        </div>
+        <ul>
+          <li>Built a 3-tier concurrent TCP server in C: accept thread → per-connection client threads → 8 routing workers + 2 traffic workers sharing a <code>pthread_rwlock_t</code> graph of the real Tel Aviv OSM road network (~50k nodes, ~100k edges).</li>
+          <li>Implemented A* pathfinding with a binary min-heap and EMA-smoothed live traffic weights; modeled congestion physics for up to 30,000 simulated vehicles with per-class speed degradation.</li>
+          <li>Built a full-stack web UI with a Python HTTP↔TCP bridge and Leaflet.js live map showing car positions and congestion overlays; deployed the entire stack via Docker Compose.</li>
+        </ul>
+        <div class="tech-pills">
+          <span class="tech-pill">C</span>
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">pthreads</span>
+          <span class="tech-pill">TCP/IP</span>
+          <span class="tech-pill">A* routing</span>
+          <span class="tech-pill">OpenStreetMap</span>
+          <span class="tech-pill">Leaflet.js</span>
+          <span class="tech-pill">Docker</span>
+        </div>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-card-head">
+          <div>
+            <div class="proj-title-row">
+              <h3>PlayFlicks</h3>
+              <span class="badge badge-fullstack">Full-Stack · MERN</span>
+            </div>
+            <div class="proj-year">2025</div>
+          </div>
+          <a class="proj-link" href="https://github.com/elir0n/PlayFlicks" target="_blank" rel="noreferrer">
+            GitHub
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+        <ul>
+          <li>Full-stack movie platform (MERN) with authentication, role-based access control, and optimized MongoDB queries for movie retrieval.</li>
+          <li>Recommendation engine written in C using user–movie similarity scoring from shared viewing history, with movies ranked by aggregated similarity weights.</li>
+        </ul>
+        <div class="tech-pills">
+          <span class="tech-pill">Node.js</span>
+          <span class="tech-pill">Express</span>
+          <span class="tech-pill">React</span>
+          <span class="tech-pill">MongoDB</span>
+          <span class="tech-pill">C</span>
+          <span class="tech-pill">REST API</span>
+          <span class="tech-pill">Auth</span>
+        </div>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-card-head">
+          <div>
+            <div class="proj-title-row">
+              <h3>AI Voice Agent</h3>
+              <span class="badge badge-ai">AI · Backend</span>
+            </div>
+            <div class="proj-year">2025</div>
+          </div>
+          <a class="proj-link" href="https://github.com/elir0n/AI-voice-agent-Dr-Claude" target="_blank" rel="noreferrer">
+            GitHub
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+        <ul>
+          <li>Multilingual AI voice assistant automating appointment booking, rescheduling, and cancellation via natural-language phone calls.</li>
+          <li>Integrated Whisper + OpenAI for speech-to-text and conversation handling; Asterisk telephony infrastructure for automated call routing.</li>
+        </ul>
+        <div class="tech-pills">
+          <span class="tech-pill">Node.js</span>
+          <span class="tech-pill">Express</span>
+          <span class="tech-pill">Whisper</span>
+          <span class="tech-pill">OpenAI</span>
+          <span class="tech-pill">Asterisk</span>
+          <span class="tech-pill">SQL</span>
+        </div>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-card-head">
+          <div>
+            <div class="proj-title-row">
+              <h3>CNN Image Classifier — FashionMNIST</h3>
+              <span class="badge badge-ml">Deep Learning</span>
+            </div>
+            <div class="proj-year">2025</div>
+          </div>
+        </div>
+        <ul>
+          <li>Designed and trained a 3-block CNN (Conv2d → BatchNorm → ReLU → MaxPool → Dropout) in PyTorch, achieving 80%+ validation accuracy on FashionMNIST.</li>
+          <li>Benchmarked against a fully-connected MLP baseline; tuned architecture depth, filter counts, dropout rate, and learning rate to optimize convergence.</li>
+        </ul>
+        <div class="tech-pills">
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">PyTorch</span>
+          <span class="tech-pill">CNN</span>
+          <span class="tech-pill">BatchNorm</span>
+          <span class="tech-pill">FashionMNIST</span>
+          <span class="tech-pill">Deep Learning</span>
+        </div>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-card-head">
+          <div>
+            <div class="proj-title-row">
+              <h3>Neural Network from Scratch</h3>
+              <span class="badge badge-ml">ML</span>
+            </div>
+            <div class="proj-year">2025</div>
+          </div>
+        </div>
+        <ul>
+          <li>MLP implemented in pure NumPy — forward propagation, backpropagation, and gradient descent without any ML framework.</li>
+          <li>Full training pipeline: data loading, training loop, and evaluation on handwritten digit classification.</li>
+        </ul>
+        <div class="tech-pills">
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">NumPy</span>
+          <span class="tech-pill">MLP</span>
+          <span class="tech-pill">Backpropagation</span>
+        </div>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-card-head">
+          <div>
+            <div class="proj-title-row">
+              <h3>K-Means &amp; PCA from Scratch</h3>
+              <span class="badge badge-ml">ML</span>
+            </div>
+            <div class="proj-year">2025</div>
+          </div>
+        </div>
+        <ul>
+          <li>K-Means with convergence detection + PCA via eigen-decomposition in NumPy, applied to 2D synthetic datasets and MNIST (784 → 2 dims).</li>
+          <li>Demonstrated MNIST reconstruction at 3, 10, and 100 principal components to illustrate the quality–compression trade-off.</li>
+        </ul>
+        <div class="tech-pills">
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">NumPy</span>
+          <span class="tech-pill">K-Means</span>
+          <span class="tech-pill">PCA</span>
+          <span class="tech-pill">MNIST</span>
+          <span class="tech-pill">Unsupervised Learning</span>
+        </div>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-card-head">
+          <div>
+            <div class="proj-title-row">
+              <h3>CPU Scheduler Simulator</h3>
+              <span class="badge badge-systems">Systems · OS</span>
+            </div>
+            <div class="proj-year">2024</div>
+          </div>
+        </div>
+        <ul>
+          <li>FCFS, SJF, Priority, and Round Robin scheduling algorithms in C; Unix signals used to model scheduling events and preemption.</li>
+          <li>Structured logging to validate scheduler correctness across multiple workloads and time-slice scenarios.</li>
+        </ul>
+        <div class="tech-pills">
+          <span class="tech-pill">C</span>
+          <span class="tech-pill">Unix Signals</span>
+          <span class="tech-pill">FCFS</span>
+          <span class="tech-pill">Round Robin</span>
+          <span class="tech-pill">OS</span>
+        </div>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-card-head">
+          <div>
+            <div class="proj-title-row">
+              <h3>Linux Backup Tool</h3>
+              <span class="badge badge-systems">Systems · POSIX</span>
+            </div>
+            <div class="proj-year">2024</div>
+          </div>
+        </div>
+        <ul>
+          <li>Recursive directory backup in C using POSIX file system APIs, preserving permissions, metadata, symbolic links, and hard links to avoid duplicate copying.</li>
+        </ul>
+        <div class="tech-pills">
+          <span class="tech-pill">C</span>
+          <span class="tech-pill">POSIX</span>
+          <span class="tech-pill">Linux</span>
+          <span class="tech-pill">File Systems</span>
+          <span class="tech-pill">Symlinks</span>
+        </div>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-card-head">
+          <div>
+            <div class="proj-title-row">
+              <h3>WhatsBlast</h3>
+              <span class="badge badge-automation">Automation</span>
+            </div>
+            <div class="proj-year">2025</div>
+          </div>
+          <a class="proj-link" href="https://github.com/suliamit/whatsblast" target="_blank" rel="noreferrer">
+            GitHub
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+        <ul>
+          <li>WhatsApp automation workflows using n8n and the Evolution API for bulk message scheduling and delivery pipelines.</li>
+        </ul>
+        <div class="tech-pills">
+          <span class="tech-pill">n8n</span>
+          <span class="tech-pill">Evolution API</span>
+          <span class="tech-pill">WhatsApp</span>
+          <span class="tech-pill">Workflow Automation</span>
+        </div>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-card-head">
+          <div>
+            <div class="proj-title-row">
+              <h3>Arkanoid Game</h3>
+              <span class="badge badge-oop">OOP · Java</span>
+            </div>
+            <div class="proj-year">2024</div>
+          </div>
+          <a class="proj-link" href="https://github.com/elir0n/Arkanoid-Game" target="_blank" rel="noreferrer">
+            GitHub
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+        <ul>
+          <li>Arkanoid-style 2D game in Java with modular OOP architecture — game loop, event/input handling, collision detection, and extensible level system.</li>
+        </ul>
+        <div class="tech-pills">
+          <span class="tech-pill">Java</span>
+          <span class="tech-pill">OOP</span>
+          <span class="tech-pill">Game Loop</span>
+          <span class="tech-pill">Design Patterns</span>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Education + Military -->
+    <div class="grid">
       <section class="card">
         <h2>Education</h2>
         <div class="edu">
           <div class="edu-title">B.Sc. in Computer Science — Bar-Ilan University</div>
-          <div class="muted">Jan 2024 – Present • Expected graduation: Aug 2027</div>
+          <div class="muted" style="margin-bottom:10px;">Jan 2024 – Present &nbsp;·&nbsp; Expected Aug 2027</div>
           <div class="pill-row">
-            <span class="pill">Data Structures</span>
             <span class="pill">Algorithms</span>
+            <span class="pill">Advanced Algorithms</span>
             <span class="pill">Operating Systems</span>
+            <span class="pill">Parallel &amp; Distributed Systems</span>
             <span class="pill">Databases</span>
             <span class="pill">Machine Learning</span>
           </div>
@@ -134,18 +367,19 @@
 
       <section class="card">
         <h2>Military Experience</h2>
-        <div class="muted">Air Force Intelligence • Israeli Air Force • 2021 – 2023</div>
+        <div class="muted" style="margin-bottom:10px;">Air Force Intelligence &nbsp;·&nbsp; Israeli Air Force &nbsp;·&nbsp; 2021–2023</div>
         <ul>
-          <li>Operated in mission-critical environments, strengthening problem-solving, reliability, and adaptability.</li>
-          <li>Collaborated on sensitive projects under strict deadlines in a project-oriented role.</li>
-          <li>Served in reserves for ~2 years with continued operational involvement.</li>
+          <li>Operated in mission-critical environments requiring reliability and precision under strict deadlines.</li>
+          <li>Worked on sensitive operational projects in a team-oriented role requiring strong communication and adaptability.</li>
+          <li>Continued reserve service for 2+ years with ongoing operational involvement.</li>
         </ul>
       </section>
-    </section>
+    </div>
 
     <footer class="footer">
       <div class="muted">© <span id="y"></span> Eliron Picard</div>
     </footer>
+
   </main>
 
   <script>
