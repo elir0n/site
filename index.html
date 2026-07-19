@@ -60,7 +60,7 @@
         <div>
           <div class="skill">
             <div class="label">Languages</div>
-            <div class="value">C, C++, Python, JavaScript, Java</div>
+            <div class="value">C, C++, Python, JavaScript, Java, Go</div>
           </div>
           <div class="skill">
             <div class="label">Backend</div>
@@ -105,18 +105,25 @@
             </div>
             <div class="proj-year">2025</div>
           </div>
+          <a class="proj-link" href="https://github.com/elir0n/waze" target="_blank" rel="noreferrer">
+            GitHub
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
         </div>
         <ul>
-          <li>Built a 3-tier concurrent TCP server in C: accept thread → per-connection client threads → 8 routing workers + 2 traffic workers sharing a <code>pthread_rwlock_t</code> graph of the real Tel Aviv OSM road network (~50k nodes, ~100k edges).</li>
-          <li>Implemented A* pathfinding with a binary min-heap and EMA-smoothed live traffic weights; modeled congestion physics for up to 30,000 simulated vehicles with per-class speed degradation.</li>
+          <li>Built a 3-tier concurrent TCP server in C: accept thread → per-connection client threads → lock-free A* routing workers (C11 <code>_Atomic</code> reads, zero contention) + EMA traffic workers (64-stripe mutexes) over the real Tel Aviv OSM road network (~6,500 nodes, ~13,000 edges).</li>
+          <li>Implemented A* pathfinding with a flat binary min-heap and per-worker pre-allocated <code>RouteContext</code> scratch space (generation counter for O(1) resets, no per-call allocation); added hierarchical section routing — a precomputed 5×5 hub-to-hub grid stitched with concurrent per-car segment routing for fast batch requests.</li>
+          <li>Modeled congestion physics for up to 30,000 simulated vehicles with per-class speed degradation; benchmarked 11.27× throughput scaling to 16 workers (362.5 → 4,087 ops/s, p50 13.3 ms) on a 16-core machine.</li>
           <li>Built a full-stack web UI with a Python HTTP↔TCP bridge and Leaflet.js live map showing car positions and congestion overlays; deployed the entire stack via Docker Compose.</li>
         </ul>
         <div class="tech-pills">
           <span class="tech-pill">C</span>
           <span class="tech-pill">Python</span>
-          <span class="tech-pill">pthreads</span>
+          <span class="tech-pill">C11 Atomics</span>
+          <span class="tech-pill">Lock-Free</span>
           <span class="tech-pill">TCP/IP</span>
           <span class="tech-pill">A* routing</span>
+          <span class="tech-pill">Hierarchical Routing</span>
           <span class="tech-pill">OpenStreetMap</span>
           <span class="tech-pill">Leaflet.js</span>
           <span class="tech-pill">Docker</span>
@@ -167,16 +174,76 @@
           </a>
         </div>
         <ul>
-          <li>Multilingual AI voice assistant automating appointment booking, rescheduling, and cancellation via natural-language phone calls.</li>
-          <li>Integrated Whisper + OpenAI for speech-to-text and conversation handling; Asterisk telephony infrastructure for automated call routing.</li>
+          <li>Multilingual AI voice assistant automating appointment booking, rescheduling, and cancellation via natural-language phone calls, with auto-detected language support for Hebrew, English, and French.</li>
+          <li>Integrated Deepgram Nova-2 for speech-to-text and Claude Sonnet for LLM-based conversation handling; Asterisk telephony infrastructure for automated call routing.</li>
+          <li>Backend services in Node.js, Express, and SQLite for scheduling workflows, with Google Calendar API integration for real-time slot availability and booking.</li>
         </ul>
         <div class="tech-pills">
           <span class="tech-pill">Node.js</span>
           <span class="tech-pill">Express</span>
-          <span class="tech-pill">Whisper</span>
-          <span class="tech-pill">OpenAI</span>
+          <span class="tech-pill">Deepgram</span>
+          <span class="tech-pill">Claude</span>
           <span class="tech-pill">Asterisk</span>
-          <span class="tech-pill">SQL</span>
+          <span class="tech-pill">Google Calendar API</span>
+          <span class="tech-pill">SQLite</span>
+          <span class="tech-pill">Docker</span>
+        </div>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-card-head">
+          <div>
+            <div class="proj-title-row">
+              <h3>Orchestra — Multi-Agent Automation Platform</h3>
+              <span class="badge badge-ai">AI · Backend</span>
+            </div>
+            <div class="proj-year">2025</div>
+          </div>
+          <a class="proj-link" href="https://github.com/elir0n/orchestra" target="_blank" rel="noreferrer">
+            GitHub
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+        <ul>
+          <li>Python multi-agent orchestrator that auto-discovers agents at startup and maps each to a CLI subcommand with zero manual registration.</li>
+          <li>Referral Finder agent: concurrently searches LinkedIn via Tavily, resolves candidate emails through a 4-tier pipeline (GitHub API → domain pattern cache → Hunter.io → SMTP RCPT TO), and generates personalized outreach with Claude Haiku.</li>
+          <li>Job Finder agent: searches job listings via web APIs, tailors CV content per role using the Claude API, and writes a formatted .docx file; secrets auto-injected into typed agent configs via naming convention.</li>
+        </ul>
+        <div class="tech-pills">
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">Claude API</span>
+          <span class="tech-pill">Tavily</span>
+          <span class="tech-pill">Hunter.io</span>
+          <span class="tech-pill">SMTP</span>
+          <span class="tech-pill">ThreadPoolExecutor</span>
+          <span class="tech-pill">Docker</span>
+        </div>
+      </article>
+
+      <article class="proj-card">
+        <div class="proj-card-head">
+          <div>
+            <div class="proj-title-row">
+              <h3>Mimi — AI Language Practice Coach</h3>
+              <span class="badge badge-ai">AI · Backend</span>
+            </div>
+            <div class="proj-year">2025</div>
+          </div>
+        </div>
+        <ul>
+          <li>Real-time AI phone language coach routing Twilio calls directly into the OpenAI Realtime API over WebSocket — mulaw 8kHz audio forwarded raw in both directions with zero transcoding for sub-200ms conversation.</li>
+          <li>Multi-agent post-turn pipeline: Claude Haiku runs an async quality observer and safety-violation detector after each turn, while gpt-4o-mini generates post-call progress notes injected into the next session.</li>
+          <li>Persistent per-caller memory via Drizzle ORM + Neon PostgreSQL, letting returning callers skip onboarding; skill-file architecture defines all coaching behavior as versioned markdown loaded at runtime.</li>
+          <li>Multilingual onboarding across Hebrew, English, and German with server-side VAD language detection from the first turn.</li>
+        </ul>
+        <div class="tech-pills">
+          <span class="tech-pill">Node.js</span>
+          <span class="tech-pill">OpenAI Realtime API</span>
+          <span class="tech-pill">Twilio</span>
+          <span class="tech-pill">WebSockets</span>
+          <span class="tech-pill">Claude</span>
+          <span class="tech-pill">Drizzle ORM</span>
+          <span class="tech-pill">Neon PostgreSQL</span>
         </div>
       </article>
 
@@ -189,6 +256,10 @@
             </div>
             <div class="proj-year">2025</div>
           </div>
+          <a class="proj-link" href="https://github.com/elir0n/CNN-Image-Classifier" target="_blank" rel="noreferrer">
+            GitHub
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
         </div>
         <ul>
           <li>Designed and trained a 3-block CNN (Conv2d → BatchNorm → ReLU → MaxPool → Dropout) in PyTorch, achieving 80%+ validation accuracy on FashionMNIST.</li>
@@ -213,6 +284,10 @@
             </div>
             <div class="proj-year">2025</div>
           </div>
+          <a class="proj-link" href="https://github.com/elir0n/Neural-Network-From-Scratch" target="_blank" rel="noreferrer">
+            GitHub
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
         </div>
         <ul>
           <li>MLP implemented in pure NumPy — forward propagation, backpropagation, and gradient descent without any ML framework.</li>
@@ -235,6 +310,10 @@
             </div>
             <div class="proj-year">2025</div>
           </div>
+          <a class="proj-link" href="https://github.com/elir0n/K-Means-PCA" target="_blank" rel="noreferrer">
+            GitHub
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
         </div>
         <ul>
           <li>K-Means with convergence detection + PCA via eigen-decomposition in NumPy, applied to 2D synthetic datasets and MNIST (784 → 2 dims).</li>
@@ -259,6 +338,10 @@
             </div>
             <div class="proj-year">2024</div>
           </div>
+          <a class="proj-link" href="https://github.com/elir0n/Unix-Signal-Based-Scheduling-Event-Simulation-Engine" target="_blank" rel="noreferrer">
+            GitHub
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
         </div>
         <ul>
           <li>FCFS, SJF, Priority, and Round Robin scheduling algorithms in C; Unix signals used to model scheduling events and preemption.</li>
@@ -282,6 +365,10 @@
             </div>
             <div class="proj-year">2024</div>
           </div>
+          <a class="proj-link" href="https://github.com/elir0n/backup-tool" target="_blank" rel="noreferrer">
+            GitHub
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
         </div>
         <ul>
           <li>Recursive directory backup in C using POSIX file system APIs, preserving permissions, metadata, symbolic links, and hard links to avoid duplicate copying.</li>
